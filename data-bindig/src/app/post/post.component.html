@@ -1,0 +1,16 @@
+<div>
+    <h2>post components!</h2>
+    <!-- template variables  -->
+    <input type="text" #filedInput/>
+    
+    <button (click)="handleButtonClick(filedInput.value)">Click</button><br/>
+    <!-- two way data binding  -->
+     <input type="text" [(ngModel)]="userName" (keyup.enter)="handleonKeyup()"/>
+     
+     <!-- one way data binding  -->
+    <br/>
+    <input type="text" [value]="textValue" (keyup.enter)="handleValue()"/>
+    <br/>
+    <!-- two way data binding with custom validator  -->
+    <input type="text" [(ngModel)]="textValue" (keyup.enter)="handleValue2()"/>
+</div> 
