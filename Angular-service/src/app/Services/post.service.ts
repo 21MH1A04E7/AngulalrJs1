@@ -3,6 +3,7 @@ export class PostService{
     @Injectable({
         providedIn:'root'
     })
+
     //injectable for root service
     postArray:Array<any>=[
         {id: 1,postTitle:'post 1'},
@@ -12,4 +13,8 @@ export class PostService{
         {id: 5,postTitle:'post 5'},
         {id: 6,postTitle:'post 6'}
     ]
+    addPost(data:any):void{
+        this.postArray.push(data)
+        console.log(data)
+    }
 }
