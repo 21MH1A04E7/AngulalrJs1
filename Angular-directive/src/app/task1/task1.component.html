@@ -1,0 +1,36 @@
+<p>task1 works!</p>
+<div class="box">
+  <div class="user-details">
+    <h1>User Details</h1>
+    <input type="text" placeholder="Enter your name" [(ngModel)]="name" />
+    <input type="text" placeholder="Enter your email" [(ngModel)]="email" />
+    <textarea [(ngModel)]="address" rows="4" cols="50">{{ address }}</textarea>
+    <button (click)="onSave()">Save Data</button>
+  </div>
+  <div *ngIf="arrayObject.length >0;else noData">
+    <table cellpadding="10" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of arrayObject; let index = index">
+          <th>{{ index + 1 }}</th>
+          <th>{{ item.name }}</th>
+          <th>{{ item.email }}</th>
+          <th>{{ item.address }}</th>
+          <th>
+            <button (click)="onDelete(index)">Delete</button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noData>
+    <p>No data is available to fetch......</p>
+  </ng-template>
+</div>

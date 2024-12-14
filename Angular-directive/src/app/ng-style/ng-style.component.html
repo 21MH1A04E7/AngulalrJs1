@@ -1,0 +1,17 @@
+<p>ng-style works!</p>
+<button (click)="onClick()">Toggle isActive</button>
+<h1
+  [style.color]="isActive ? 'red' : 'blue'"
+  [style.textTransform]="isActive ? 'uppercase' : 'lowercase'"
+>
+  Angular Style Components
+</h1>
+
+<!-- ngStyle directive  -->
+<!-- when defining a ngstyle condition we have to define the else part as well
+otherwise we will get a compile error -->
+<h1 [ngStyle]="{
+    color: isActive? 'green' : 'yellow',
+    backgroundColor: isActive? 'lightgreen' : 'lightblue'
+  
+}">NgStyle Directive</h1>

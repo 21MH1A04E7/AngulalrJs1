@@ -6,3 +6,10 @@
     background-color: black;
     margin-top: 20px;
 }
+a{
+    text-decoration: none;
+    color: rgb(46, 71, 211);
+    transition: color 0.3s;
+    font-size: 2rem;
+    padding:2px
+}

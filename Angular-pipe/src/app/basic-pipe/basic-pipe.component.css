@@ -1,0 +1,8 @@
+.box{
+   background-color: aliceblue ;
+   padding:3rem;
+   margin: 5px;
+}
+.box1{
+    display: flex;
+}

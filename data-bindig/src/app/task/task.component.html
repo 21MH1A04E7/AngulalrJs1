@@ -1,1 +1,23 @@
-<p>task works!</p>
+<p>Task works!</p>
+<div>
+  <h1>Post Form</h1>
+  <div class="box1">
+    <input type="text" placeholder="Enter title" [(ngModel)]="title" (change)="handleTitle()"/>
+    <textarea cols="4" rows="6" [(ngModel)]="description" (change)="handleDescription()">It was a dark and stormy night...</textarea>
+    <input type="text" placeholder="Enter description" />
+    <input type="text" placeholder="Add tags" />
+    <div class="checkbox-container">
+      <input type="checkbox" id="background" />
+      <label for="background">Add Background</label>
+    </div>
+  </div>
+  <div class="box1">
+    <img src="https://picsum.photos/id/237/536/354" alt="image" />
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+    <section>
+      <p>Description</p>
+    </section>
+    <a href="google.com" target="_blank">Click</a>
+  </div>
+</div>

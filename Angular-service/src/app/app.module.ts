@@ -1,32 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
+import { RouterModule,Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
-import { TaskComponent } from './task/task.component';
-import { RouterModule, Routes } from '@angular/router';
+import { Post2Component } from './post2/post2.component';
+import { PostService } from './Services/post.service';
 
-const routes:Routes=[
-  {path:'',component:AppComponent},
-  {path:'task',component:TaskComponent},
-  {path:'post',component:PostComponent}
+const router:Routes=[
+  {path: 'post',component: PostComponent},
+  {path: 'post2',component: Post2Component}
 ]
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
-    TaskComponent
+    Post2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(router)
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    PostService 
   ],
   bootstrap: [AppComponent]
 })

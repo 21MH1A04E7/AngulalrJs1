@@ -1,0 +1,12 @@
+<p>change-directive1 works!</p>
+
+<button (click)="addNew()">Add New</button>
+
+<ul>
+  <!-- <li *ngFor="let item of objArray">{{item.title}}
+    <button (click)="handleDelete(item)">Delete</button>
+  </li> -->
+  <li *ngFor="let item of objArray;let i=index">{{item.title}}
+    <button (click)="handleDelete1(i)">Delete</button>
+  </li>
+</ul>

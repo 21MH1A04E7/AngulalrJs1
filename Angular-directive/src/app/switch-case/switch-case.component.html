@@ -1,0 +1,13 @@
+<p>switch-case works!</p>
+<div>
+  <button (click)="onClickForm('step 1')">Step 1</button>
+  <button (click)="onClickForm('step 2')">Step 2</button>
+  <button (click)="onClickForm('step 3')">Step 3</button>
+</div>
+
+<div [ngSwitch]="stepForm">
+  <div *ngSwitchCase="'step 1'">Step 1 Frorm</div>
+  <div *ngSwitchCase="'step 2'">Step 2 Frorm</div>
+  <div *ngSwitchCase="'step 3'">Step 3 Frorm</div>
+  <div *ngSwitchDefault>Something else</div>
+</div>

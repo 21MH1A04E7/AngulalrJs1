@@ -1,0 +1,34 @@
+<div class="box1">
+    <div class="box">
+        <h2>{{ name | uppercase }}</h2>
+        <h2>{{ city | lowercase }}</h2>
+        <!-- number pipe -->
+        <h2>{{ value | number }}</h2>
+        <h2>{{ dcValue }}</h2>
+        <h2>{{ dcValue | number : "2." }}</h2>
+        <h2>{{ dcValue | number : "2.1-2" }}</h2>
+        <h2>{{ dcValue | number : "1.1-4" }}</h2>
+        <!-- currency pipe -->
+          <p>currency pipe</p>
+          <h2>{{ price | currency }}</h2>
+          <h2>{{ price | currency:'JPY':'code' }}</h2>
+          <h2>{{ price | currency:'JPY':'symbol':'2.1-3' }}</h2>
+      </div>
+      <div class="box">
+        <p>date pipe...</p>
+        <h2>{{today}}</h2>
+        <h2>{{today | date:'fullDate' }}</h2>
+        <h2>{{today | date}}</h2>
+        <h2>{{today | date:'shortDate'}}</h2>
+        <p>Json pipe ....</p>
+        <p>{{postObj}}</p>
+        <p>{{postObj | json}}</p>
+        <p>percentage ...</p>
+        <h2>{{0.563 | percent }}</h2>
+        <p>Slice pipe.......</p>
+        <p>{{postArray}}</p>
+        <p>{{postArray | slice:0:3}}</p> 
+        <p>custom pipe...</p>
+        <h3>{{userDetails.name |append}}</h3>
+      </div> 
+</div>
