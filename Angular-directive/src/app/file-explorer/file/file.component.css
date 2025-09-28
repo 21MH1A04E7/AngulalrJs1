@@ -1,0 +1,63 @@
+.file-explorer {
+    font-family: Arial, sans-serif;
+    padding-left: 15px;
+  }
+  
+  .node {
+    margin: 5px 0;
+  }
+  
+  .node-header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .node-header:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .folder .node-header {
+    font-weight: bold;
+  }
+  
+  .file .node-header {
+    color: #555;
+  }
+  
+  .expand-icon {
+    margin-right: 5px;
+    width: 15px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .item-icon {
+    margin-right: 8px;
+  }
+  
+  .item-name {
+    flex-grow: 1;
+  }
+  
+  .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff4444;
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  
+  .delete-btn:hover {
+    color: #cc0000;
+  }
+  
+  .children {
+    margin-left: 20px;
+    border-left: 1px dashed #ccc;
+    padding-left: 10px;
+  }

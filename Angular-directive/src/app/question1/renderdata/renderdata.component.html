@@ -1,0 +1,17 @@
+<div class="box">
+  <ng-container *ngFor="let item of data">
+    <div class="item-container">
+      <input
+        type="checkbox"
+        [checked]="mapData[item.id]"
+        (change)="handleClick($event, item)"
+      />
+      <span>{{ item.name }}</span>
+    </div>
+    <app-renderdata
+      *ngIf="item.children"
+      [data]="item.children"
+      [mapData]="mapData"
+    ></app-renderdata>
+  </ng-container>
+</div>

@@ -2,5 +2,8 @@
 <button (click)="addCard()">addData
 </button>
 <ul>
-    <li *ngFor="let item of cardData;let i=index">{{item.titleCard}} {{item.description}} <button (click)="onDelete(i)">Delete</button></li>
+    <li *ngFor="let item of cardData;let i=index">{{item.titleCard}} 
+        {{item.description}} 
+        <button (click)="onDelete(i)">Delete</button>
+    </li>
 </ul>

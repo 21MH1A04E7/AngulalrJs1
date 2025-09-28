@@ -1,0 +1,10 @@
+<p>otp-field works!</p>
+<div class="otp-container ">
+    <input
+    *ngFor="let item of otpArray.controls;let i=index"
+     type="text"
+     class="otp-input"
+     (input)="onInput($event,i)"
+     (keydown)="onKeyDown($event,i)"
+     />
+</div>

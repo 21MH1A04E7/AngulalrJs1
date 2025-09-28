@@ -1,0 +1,19 @@
+<div class="file-explorer">
+    <ng-container *ngFor="let item of fileExplorerData">
+      <div class="node" [class.folder]="item.isFolder" [class.file]="!item.isFolder">
+        <div class="node-header">
+          <span class="expand-icon" *ngIf="item.isFolder" (click)="handleExpanded(item)">
+            {{item.isExpanded ? '▼' : '►'}}
+          </span>
+          <span class="item-icon">
+            {{item.isFolder ? '📁' : '📄'}}
+          </span>
+          <span class="item-name">{{item.name}}</span>
+          <button class="delete-btn" (click)="handleDelete(item);$event.stopPropagation()"> 🗑️</button>
+        </div>
+        <div class="children" *ngIf="item?.children.length && item.isExpanded && item.isFolder">
+            <app-file [fileExplorerData]="item.children" (itemDeleted)="onDelete($event)"></app-file>
+        </div>
+      </div>
+    </ng-container>
+  </div>

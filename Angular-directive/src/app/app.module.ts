@@ -14,6 +14,11 @@ import { SwitchCaseComponent } from './switch-case/switch-case.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { Task1Component } from './task1/task1.component';
+import { OtpFieldComponent } from './otp-field/otp-field.component';
+import { Question1Component } from './question1/question1.component';
+import { RenderdataComponent } from './question1/renderdata/renderdata.component';
+import { FileExplorerComponent } from './file-explorer/file-explorer.component';
+import { FileComponent } from './file-explorer/file/file.component';
 
 const routes:Routes=[
   {path:'',component: AppComponent},
@@ -24,7 +29,10 @@ const routes:Routes=[
   {path:'switch-case',component:SwitchCaseComponent},
   {path:'ng-style',component:NgStyleComponent},
   {path:'ng-class',component:NgClassComponent},
-  {path:'task1',component:Task1Component}
+  {path:'task1',component:Task1Component},
+  {path:'otp-field',component:OtpFieldComponent},
+  {path:'question1',component:Question1Component},
+  {path:'file',component:FileExplorerComponent}
 ]
 @NgModule({
   declarations: [
@@ -37,13 +45,18 @@ const routes:Routes=[
     NgStyleComponent,
     NgClassComponent,
     Task1Component,
+    OtpFieldComponent,
+    Question1Component,
+    RenderdataComponent,
+    FileExplorerComponent,
+    FileComponent,
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
   ],
   providers: [
     provideClientHydration()
